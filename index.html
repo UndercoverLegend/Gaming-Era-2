@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Game Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>🎮 Online Game Portal</h1>
+
+    <input type="text" id="searchBar" placeholder="Search for a game..." onkeyup="searchGames()">
+
+    <div class="category-container">
+        <button onclick="filterGames('all')">All</button>
+        <button onclick="filterGames('racing')">🏎️ Racing</button>
+        <button onclick="filterGames('shooting')">🔫 Shooting</button>
+        <button onclick="filterGames('sports')">🏀 Sports</button>
+        <button onclick="filterGames('puzzle')">🧩 Puzzle</button>
+        <button onclick="filterGames('arcade')">🕹️ Arcade</button>
+        <button onclick="filterGames('adventure')">🗺️ Adventure</button>
+        <button onclick="filterGames('strategy')">🧠 Strategy</button>
+        <button onclick="filterGames('multiplayer')">👥 Multiplayer</button>
+        <button onclick="filterGames('io')">🌐 .io Games</button>
+    </div>
+
+    <div class="game-container">
+        <!-- Racing Games -->
+        <div class="game-card racing" onclick="loadGame('https://www.onlinegames.io/embed/drift-hunters-2')">
+            <p>🚗 Drift Hunters 2</p>
+        </div>
+        <div class="game-card racing" onclick="loadGame('https://www.onlinegames.io/embed/moto-x3m')">
+            <p>🏍️ Moto X3M</p>
+        </div>
+        <div class="game-card racing" onclick="loadGame('https://www.onlinegames.io/embed/madalin-stunt-cars-pro')">
+            <p>🏎️ Madalin Stunt Cars Pro</p>
+        </div>
+        <div class="game-card racing" onclick="loadGame('https://www.onlinegames.io/embed/rally-point-4')">
+            <p>🏁 Rally Point 4</p>
+        </div>
+        <div class="game-card racing" onclick="loadGame('https://www.onlinegames.io/embed/extreme-drift')">
+            <p>💨 Extreme Drift</p>
+        </div>
+
+        <!-- Shooting Games -->
+        <div class="game-card shooting" onclick="loadGame('https://www.onlinegames.io/embed/krunker-io')">
+            <p>🔫 Krunker.io</p>
+        </div>
+        <div class="game-card shooting" onclick="loadGame('https://www.onlinegames.io/embed/bullet-force')">
+            <p>💥 Bullet Force</p>
+        </div>
+        <div class="game-card shooting" onclick="loadGame('https://www.onlinegames.io/embed/deadshot-io')">
+            <p>🎯 Deadshot.io</p>
+        </div>
+        <div class="game-card shooting" onclick="loadGame('https://www.onlinegames.io/embed/arena-wars-io')">
+            <p>⚔️ Arena Wars.io</p>
+        </div>
+        <div class="game-card shooting" onclick="loadGame('https://www.onlinegames.io/embed/pixel-survival')">
+            <p>🟩 Pixel Survival</p>
+        </div>
+
+        <!-- Sports Games -->
+        <div class="game-card sports" onclick="loadGame('https://www.onlinegames.io/embed/basketball-stars')">
+            <p>🏀 Basketball Stars</p>
+        </div>
+        <div class="game-card sports" onclick="loadGame('https://www.onlinegames.io/embed/soccer-random-pro')">
+            <p>⚽ Soccer Random Pro</p>
+        </div>
+        <div class="game-card sports" onclick="loadGame('https://www.onlinegames.io/embed/golf-orbit')">
+            <p>🏌️ Golf Orbit</p>
+        </div>
+
+        <!-- Arcade Games -->
+        <div class="game-card arcade" onclick="loadGame('https://www.onlinegames.io/embed/fireboy-and-watergirl')">
+            <p>🔥💧 Fireboy & Watergirl</p>
+        </div>
+        <div class="game-card arcade" onclick="loadGame('https://www.onlinegames.io/embed/super-mario-64')">
+            <p>🍄 Super Mario 64</p>
+        </div>
+        <div class="game-card arcade" onclick="loadGame('https://www.onlinegames.io/embed/temple-run-2')">
+            <p>🏃‍♂️ Temple Run 2</p>
+        </div>
+
+        <!-- Adventure Games -->
+        <div class="game-card adventure" onclick="loadGame('https://www.onlinegames.io/embed/zelda-classic')">
+            <p>🗡️ Zelda Classic</p>
+        </div>
+        <div class="game-card adventure" onclick="loadGame('https://www.onlinegames.io/embed/minecraft-classic')">
+            <p>⛏️ Minecraft Classic</p>
+        </div>
+        <div class="game-card adventure" onclick="loadGame('https://www.onlinegames.io/embed/run-3')">
+            <p>👾 Run 3</p>
+        </div>
+
+        <!-- Strategy Games -->
+        <div class="game-card strategy" onclick="loadGame('https://www.onlinegames.io/embed/bloons-td-5')">
+            <p>🎈 Bloons TD 5</p>
+        </div>
+        <div class="game-card strategy" onclick="loadGame('https://www.onlinegames.io/embed/chess-online')">
+            <p>♟️ Chess Online</p>
+        </div>
+
+        <!-- Multiplayer Games -->
+        <div class="game-card multiplayer" onclick="loadGame('https://www.onlinegames.io/embed/slither-io')">
+            <p>🐍 Slither.io</p>
+        </div>
+        <div class="game-card multiplayer" onclick="loadGame('https://www.onlinegames.io/embed/agar-io')">
+            <p>🟢 Agar.io</p>
+        </div>
+        <div class="game-card multiplayer" onclick="loadGame('https://www.onlinegames.io/embed/zombs-royale-io')">
+            <p>🔫 Zombs Royale.io</p>
+        </div>
+
+    </div>
+
+    <div class="game-display">
+        <iframe id="gameFrame" src="" frameborder="0"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
