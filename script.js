@@ -1,10 +1,13 @@
 function filterGames(category) {
-    let games = document.querySelectorAll(".game");
+    console.log("Filtering games:", category); // Debugging log
+
+    let games = document.querySelectorAll('.game'); // Select all game elements
+
     games.forEach(game => {
-        if (category === 'all' || game.dataset.category === category) {
-            game.style.display = "block";
+        if (category === 'all' || game.classList.contains(category)) {
+            game.style.display = 'block'; // Show matching games
         } else {
-            game.style.display = "none";
+            game.style.display = 'none'; // Hide non-matching games
         }
     });
 }
