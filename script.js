@@ -20,11 +20,14 @@ function searchGames() {
     let games = document.querySelectorAll(".game");
 
     games.forEach(game => {
-        let title = game.querySelector("h3").innerText.toLowerCase();
-        if (title.includes(input)) {
-            game.style.display = "block";
-        } else {
-            game.style.display = "none";
+        let titleElement = game.querySelector("h3"); // Get the title
+        if (titleElement) {
+            let title = titleElement.innerText.toLowerCase();
+            if (title.includes(input)) {
+                game.style.display = "block";
+            } else {
+                game.style.display = "none";
+            }
         }
     });
 }
