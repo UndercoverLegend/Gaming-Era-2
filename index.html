@@ -8,22 +8,6 @@
 </head>
 <body>
     <h1>🎮 Online Game Portal</h1>
-
-    <input type="text" id="searchBar" onkeyup="searchGames()" placeholder="Search games...">
-
-    <div class="category-container">
-        <button onclick="filterGames('all')">All</button>
-        <button onclick="filterGames('racing')">🏎️ Racing</button>
-        <button onclick="filterGames('shooting')">🔫 Shooting</button>
-        <button onclick="filterGames('sports')">🏀 Sports</button>
-        <button onclick="filterGames('puzzle')">🧩 Puzzle</button>
-        <button onclick="filterGames('arcade')">🕹️ Arcade</button>
-        <button onclick="filterGames('adventure')">🗺️ Adventure</button>
-        <button onclick="filterGames('strategy')">🧠 Strategy</button>
-        <button onclick="filterGames('multiplayer')">👥 Multiplayer</button>
-        <button onclick="filterGames('io')">🌐 .io Games</button>
-    </div>
-
     <div class="game-container">
         <!-- Racing Games -->
         <div class="game-card racing" onclick="loadGame('https://www.onlinegames.io/drift-hunters-2')">
