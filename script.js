@@ -1,4 +1,4 @@
 function loadGame(gameUrl) {
-    console.log("Loading game:", gameUrl); // Debugging log
-    window.location.href = gameUrl; // Opens the game in the current tab
+    console.log("Opening game in new tab:", gameUrl); // Debugging log
+    window.open(gameUrl, "_blank"); // Opens the game in a new tab
 }
